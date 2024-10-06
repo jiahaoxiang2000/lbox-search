@@ -1,5 +1,7 @@
 # Design of a Linear Layer Optimised for Bitsliced 32-bit Implementation
 
+> NOTE: this repository is the copy of the original repository. The original repository is available at [github origin](https://github.com/Lbox-ToSC/lbox-search).
+
 This repository contains additional data and code from the paper:
 
 > [*Design of a Linear Layer Optimised for Bitsliced 32-bit Implementation*](https://tosc.iacr.org/index.php/ToSC/article/view/11412)
