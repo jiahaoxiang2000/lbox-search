@@ -2,6 +2,13 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,c,cmake
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,linux,c,cmake
 
+### some file run binary filter
+
+find_lbox
+heuristic_implem
+L32x3
+L32x4
+
 ### C ###
 # Prerequisites
 *.d
