@@ -21,12 +21,13 @@ typedef uint32_t half_word;
 // Parameters for the search
 // See examples in the README file
 
+
 #define WORD_SIZE 32
-#define WORD_NB 4
-#define TARGET_WEIGHT 20
+#define WORD_NB 1
+#define TARGET_WEIGHT 6
 #define ITER 10
 // Number of XOR per 32-bit words
-#define MAX_XOR 6
+#define MAX_XOR 5
 // #define COMBINE3ROWS
 
 // Internal macros

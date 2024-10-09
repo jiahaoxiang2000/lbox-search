@@ -58,6 +58,8 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "types.h": "c",
-    "wmmintrin.h": "c"
-  }
+    "wmmintrin.h": "c",
+    "stdint.h": "c"
+  },
+  "C_Cpp.default.compilerPath": "/usr/bin/clang"
 }
