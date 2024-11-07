@@ -261,8 +261,10 @@ int recursive_decompose_greedy(word x0[], int n)
 int recursive_decompose(word x[], int n)
 {
   word y[n + 1];
+  // sequence length
   int y_n = n;
   word tmp_y[n + 1];
+  // sequence length 
   int tmp_yn = n;
   int cost = 0;
   int w0 = naive(x, n);
@@ -312,19 +314,27 @@ int recursive_decompose(word x[], int n)
       // struct decomp d = decompose(x[i]);
       // Unroll function to keep several decompositions
 
+      // travel all the shift
       for (int r = 1; r < 32 * WIDTH; r++)
       {
         word mask = 0;
+        // temp = rem
         word tmp = x[i] ^ mask ^ rot(mask, r);
         word z;
+        // z = x[i] & rot(x[i],-r)
+        // end condition is z = 0
         while ((z = (tmp & rot(tmp, -r))))
         {
+          // z disjoint bit with rot(z,r) 
           if (z & ~rot(z, r))
           {
+            // have disjoint bits
             mask |= z & ~rot(z, r);
           }
           else
           {
+            // z join all bit with rot(z,r)
+            // mask add the z least significant bit of 1 position
             mask |= z & ~(z - 1);
           }
 
@@ -339,6 +349,7 @@ int recursive_decompose(word x[], int n)
           tmp_y[n] = rem;
           tmp_yn = rem ? n + 1 : n;
 
+          // why creat the new similar recursive_decompose_greedy function, is not clear see the greed strategy
           int wr = recursive_decompose_greedy(tmp_y, tmp_yn);
           if (wr + 1 + (rem != 0) < best)
           {
